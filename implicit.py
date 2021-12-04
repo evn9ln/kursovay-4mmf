@@ -132,7 +132,7 @@ def Ut(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_ent
 
     plt.xlabel("t")
     plt.ylabel("V")
-    plt.plot(t_array, U, label="Неявная схема, I= " + str(I))
+    plt.plot(t_array, U, label="Неявная схема, I= " + str(I) + ",K=" + str(K))
     plt.title("Неявная схема")
     plt.legend()
     plt.show()
