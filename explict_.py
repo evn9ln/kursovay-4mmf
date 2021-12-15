@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def Uz(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_entry, U0_entry, I_entry, K_entry):
+def Vz(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_entry, U0_entry, I_entry, K_entry):
     c = float(c_entry.get())
     const_k = float(const_k_entry.get())
     betta = float(betta_entry.get())
@@ -56,7 +56,7 @@ def Uz(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_ent
     plt.show()
 
 
-def Ut(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_entry, U0_entry, I_entry, K_entry,
+def Vt(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_entry, U0_entry, I_entry, K_entry,
        z_entry):
     c = float(c_entry.get())
     const_k = float(const_k_entry.get())
