@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 def Uz(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_entry, U0_entry, I_entry, K_entry):
     c = float(c_entry.get())
     const_k = float(const_k_entry.get())
@@ -15,7 +14,7 @@ def Uz(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_ent
     I = int(I_entry.get())
     K = int(K_entry.get())
 
-    ht = T / K
+    ht = T / K / 4
     hz = l / I
 
     integral = 1.2 * betta
@@ -46,10 +45,12 @@ def Uz(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_ent
         lower_layer = upper_layer
       #  print(str(k / K * 100) + "%")
 
+
     # построение графика
     plt.xlabel("z")
     plt.ylabel("V")
     plt.plot(z_array, lower_layer, label="Явная схема при T=" + str(T))
+    print(lower_layer)
     plt.title("Явная схема")
     plt.legend()
     plt.show()
@@ -111,6 +112,7 @@ def Ut(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_ent
     plt.xlabel("t")
     plt.ylabel("V")
     plt.plot(t_array, U, label="Явная схема, I= " + str(I) + ",K=" + str(K))
+    print(U)
     plt.title("Явная схема")
     plt.legend()
     plt.show()

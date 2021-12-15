@@ -15,7 +15,7 @@ def Uz(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_ent
     I = int(I_entry.get())
     K = int(K_entry.get())
 
-    ht = T / K
+    ht = T / K /4
     hz = l / I
 
     integral = 1.2 * betta
@@ -61,6 +61,7 @@ def Uz(c_entry, const_k_entry, betta_entry, l_entry, R_entry, alpha_entry, T_ent
     plt.xlabel("z")
     plt.ylabel("V")
     plt.plot(z_array, layer, label="Неявная схема при T=" + str(T))
+    print(layer)
     plt.title("Неявная схема")
     plt.legend()
     plt.show()
